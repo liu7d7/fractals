@@ -8,6 +8,6 @@ uniform float rotation;
 uniform vec2 translation;
 
 void main() {
-  mat2 rot = mat2(cos(rotation), -sin(rotation), sin(rotation), cos(rotation));;
-  gl_Position = vec4(((rot * pos) * vec2(1., aspect) - translation) * scale, 0., 1.);
+  mat2 rot = mat2(cos(-rotation), -sin(-rotation), sin(-rotation), cos(-rotation));
+  gl_Position = vec4((rot * ((pos - translation) * scale)) * vec2(1., aspect), 0., 1.);
 }

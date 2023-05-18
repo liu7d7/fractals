@@ -22,5 +22,5 @@ include_directories(libs/khronos)
 
 set(CMAKE_EXE_LINKER_FLAGS ${CMAKE_EXE_LINKER_FLAGS} "-static")
 
-add_executable(fractals main.cpp libs/glad/glad.c libs/stb/stb_truetype.h)
+add_executable(fractals main.cpp libs/glad/glad.c libs/stb/stb_truetype.h serpinski.h glob.h koch.h)
 target_link_libraries(fractals glfw)

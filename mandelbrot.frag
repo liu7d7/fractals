@@ -24,5 +24,8 @@ void main() {
     v.y = 2 * v.x * v.y + v0.y;
     v.x = xtemp;
   }
+  if (iter == max_iter) {
+    discard;
+  }
   f_color = vec4(cos_palette(float(iter) / float(max_iter), vec3(0.8, 0.6, 1.), vec3(0.66, 0.82, 0.97), vec3(1., 1., 0.75), vec3(1., 0.69, 0.69)), 1.);
 }
